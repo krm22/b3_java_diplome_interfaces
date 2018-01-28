@@ -23,13 +23,13 @@ public class QCM extends Examen {
 	public void setApprieciationNote(double note) 
 	{
 	     if (note < 8 ) {
-	       this.apprieciation = " QCM : insufficient";
+	       this.apprieciation = " QCM apprieciation : insufficient";
 	        } else if ( note >= 8 && note <= 12 ){
-	        this.apprieciation =  " QCM : passable ";  
+	        this.apprieciation =  " QCM apprieciation : passable ";  
 	        } else if ( note >= 12 && note <= 15 ){
-	           this.apprieciation =    " QCM : good ";   
+	           this.apprieciation =    " QCM apprieciation : good ";   
 	         } else {
-	               this.apprieciation =  " QCM : very good ";  
+	               this.apprieciation =  " QCM apprieciation : very good ";  
 	          }
 	       }
 

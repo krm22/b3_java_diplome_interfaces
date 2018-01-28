@@ -12,13 +12,13 @@ public class Project extends Examen {
 	public String setApprieciationNote( double noteEcrite)
 	 {
 	     if ( noteEcrite < 5 ) {
-		       this.apprieciation =   " Project Ecrite : insufficient";
+		       this.apprieciation =   " Project Ecrite apprieciation : insufficient";
 		         } else if ( noteEcrite >= 5  && noteEcrite <= 7){
-		         this.apprieciation =  " Project Ecrite  :passable ";  
+		         this.apprieciation =  " Project Ecrite apprieciation : passable ";  
 		         } else if ( noteEcrite >= 7 && noteEcrite <= 8){
-		           this.apprieciation = " Project Ecrite  : good ";  
+		           this.apprieciation = " Project Ecrite : good ";  
 		          } else {
-		                this.apprieciation =  " noteOrale : very good "; 
+		                this.apprieciation =  " Project Ecrite apprieciation : very good "; 
 		           }
 	     return this.apprieciation ;
      }
@@ -26,16 +26,16 @@ public class Project extends Examen {
 	
 	
 	@Override
-	public String setApprieciationNote( int  noteOrale)
+	public String setApprieciationNote( int noteOrale)
 	 {
 	     if ( noteOrale  < 5 ) {
-		       this.apprieciation =   " Project Orale : insufficient";
+		       this.apprieciation =   " Project Orale apprieciation : insufficient";
 		         } else if ( noteOrale >= 5  && noteOrale <= 7  ){
-		         this.apprieciation =  " Project Orale  :passable ";  
+		         this.apprieciation =  " Project Orale apprieciation : passable ";  
 		         } else if (  noteOrale >= 7 && noteOrale <= 8){
-		           this.apprieciation = " Project Orale  : good ";  
+		           this.apprieciation = " Project Orale apprieciation : good ";  
 		          } else {
-		                this.apprieciation =  " noteOrale : very good "; 
+		                this.apprieciation =  " Project Orale apprieciation : very good "; 
 		           }
 	     return this.apprieciation ;
     }

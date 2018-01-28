@@ -18,9 +18,9 @@ public class Examen {
 		 if ( examenNote < 8 ) {
 		       this.apprieciation =   " Exam apprieciation : insufficient";
 		         } else if ( examenNote >= 8  && examenNote <= 12 ){
-		         this.apprieciation =  " Exam apprieciation  :passable ";  
+		         this.apprieciation =  " Exam apprieciation : passable ";  
 		         } else if ( examenNote >= 12 && examenNote <= 15 ){
-		           this.apprieciation = " Exam apprieciation  : good ";  
+		           this.apprieciation = " Exam apprieciation : good ";  
 		          } else {
 		                this.apprieciation =  " Exam apprieciation : very good "; 
 		           }
