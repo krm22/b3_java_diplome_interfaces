@@ -1,4 +1,5 @@
 # [b3_java_diplome_exceptions](https://sponless.github.io/epsi-b3-java/les_exceptions.html#exercice)
+## Diplôme et examens (suite)
 
 * Reprenez l’implémentation du système de gestion des diplômes des chapitres précédents.
 
