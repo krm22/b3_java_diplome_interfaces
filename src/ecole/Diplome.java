@@ -36,16 +36,29 @@ public class Diplome {
 		}
 	}
 	
+	public void delivrer() throws Exception
+	{
+      try{
+	     if(this.calcMoyen() <10){
+		   throw new Exception(" The class average has fallen below 50 % ");
+	       }
+        }
+      catch( Exception e)
+      {
+         e.printStackTrace();
+      }
+    }
+	
 	public static void main(String[] args) 
 	{
 			Diplome d = new Diplome();
 			Examen  e = new Examen();
 			Project p = new Project();
-			QCM qcm = new QCM(14); 
+			QCM qcm = new QCM(20); 
 			
-			qcm.setResponsesCorrecte(18);
+			qcm.setResponsesCorrecte(3);
 			
-			e.setNote(18);
+			e.setNote(3);
 		    p.setNote(3, 3);
 			e.getNote();
 			
@@ -56,6 +69,12 @@ public class Diplome {
 			//System.out.println(d.isValide());
 			
 			d.displayDetailDesNotes();
+			try {
+				d.delivrer();
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
     }
 	
 	
