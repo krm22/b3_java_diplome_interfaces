@@ -22,18 +22,18 @@ public abstract class Examen {
 	}
 	
 	
-	public String setApprieciationNote( double note ) 
+	public String setApprieciationNote( double note2 ) 
 	 {
 	
-		 if ( note < 8 ) 
+		 if ( note2 < 8 ) 
 		 {
 		       this.apprieciation = " Exam apprieciation : insufficient";
 		 } 
-		 else if ( note >= 8  && note <= 12 )
+		 else if ( note2 >= 8  && note2 <= 12 )
 		 {
 		       this.apprieciation =  " Exam apprieciation : passable ";  
 		 } 
-		 else if ( note >= 12 && note <= 15 )
+		 else if ( note2 >= 12 && note2 <= 15 )
 		 {
 		      this.apprieciation = " Exam apprieciation : good ";  
 	     } 

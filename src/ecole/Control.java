@@ -14,11 +14,13 @@ public class Control extends Examen {
 	}
 	
 	public void setNote( double noteEcrite, int noteOrale) {
-		 setApprieciationNote( noteEcrite );
+		 setApprieciationNote(   noteEcrite );
 		 setApprieciationNote( noteOrale );
 		 this.note = (noteEcrite + noteOrale);
 	}
 
+	
+	
    
 
 	

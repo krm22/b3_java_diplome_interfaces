@@ -41,7 +41,7 @@ public class QCM extends Control {
 	
 
 	
-	@Override
+
 	public String setApprieciationNote(double note) 
 	{
 	     if (note < 8) 

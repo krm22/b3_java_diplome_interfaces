@@ -2,14 +2,14 @@ package ecole;
 
 public class Project extends Control {
 	
-	
+   
 	@Override
 	public String setApprieciationNote( double noteEcrite) throws IllegalArgumentException
 	{
       try{
     	     if(noteEcrite < 0 || noteEcrite > 10 || noteEcrite < 0 )
     	     {
-    		   throw new IllegalArgumentException(" Numbers must be over 0 or 20 and under ");
+    		   throw new IllegalArgumentException(" Numbers must be equal to or over 0 and equal to or under 10 ");
     	     }
 	    if ( noteEcrite < 5 ) 
 	        {
@@ -36,6 +36,8 @@ public class Project extends Control {
   
 
 	
+	
+
 	public String setApprieciationNote( int noteOrale) throws IllegalArgumentException, NullPointerException
 	 {
 	  try{

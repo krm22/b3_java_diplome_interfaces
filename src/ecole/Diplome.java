@@ -18,13 +18,40 @@ public class Diplome {
 			sumOfNotes += exam.getNote();
 		}
 		average = sumOfNotes / this.examens.size();
-		System.out.println(average);
 		return average;
 	}
 	
-	public boolean isValide() 
+	public String isValide() 
+	{   String passed = "";
+		
+	    if(	( this.calcMoyen() >= 10) ? true : false ){
+            passed = " This student has achieved the average or higher ";
+            System.out.println(passed);
+	    }
+	    getMention((this.calcMoyen()));
+		return passed;
+	}
+	
+	public void getMention( int moyen )
 	{
-		return (this.calcMoyen() >= 10) ? true : false; 	
+	
+			if( moyen >= 10 && moyen <= 12 )
+	        {
+				System.out.println(Mention.PASSABLE.getMention());
+			}
+	        else if( moyen >= 12 && moyen <= 14 )
+	        {
+	        	    System.out.println(Mention.BIEN.getMention());
+	        }
+	        else if( moyen >= 14 && moyen <= 16 )
+	        {
+	        	System.out.println(Mention.TRESBIEN.getMention());
+	        }
+	        else
+	        {
+	        	System.out.println(Mention.EXCELLANT.getMention()); 
+	        }
+		
 	}
 	
 	public void displayDetailDesNotes()
@@ -39,7 +66,7 @@ public class Diplome {
 	public void delivrer() throws Exception
 	{
       try{
-	     if(this.calcMoyen() <10){
+	     if(this.calcMoyen() < 10){
 		   throw new Exception(" The class average has fallen below 50 % ");
 	       }
         }
@@ -56,17 +83,17 @@ public class Diplome {
 			Project p = new Project();
 			QCM qcm = new QCM(20); 
 			
-			qcm.setResponsesCorrecte(3);
+			qcm.setResponsesCorrecte(18);
 			
-			e.setNote(3);
-		    p.setNote(3, 3);
-			e.getNote();
 			
+			e.setNote(11);
+		    p.setNote(10, 10);
+	
 			d.addExamen(e);
 			d.addExamen(p);
 			d.addExamen(qcm);
 			
-			//System.out.println(d.isValide());
+			System.out.println(d.isValide());
 			
 			d.displayDetailDesNotes();
 			try {
