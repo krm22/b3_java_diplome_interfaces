@@ -1,4 +1,4 @@
-# [b3_java_diplome_exceptions](https://sponless.github.io/epsi-b3-java/les_exceptions.html#exercice)
+# [b3_java_diplome_abstraite](https://spoonless.github.io/epsi-b3-java/classe_abstraite.html#exercice)
 ## Diplôme et examens (suite)
 
 * Reprenez l’implémentation du système de gestion des diplômes des chapitres précédents.
@@ -6,9 +6,11 @@
 * L’objectif est d’ajouter des contrôles sous la forme d’exceptions pour vérifier les cas suivants :
 
 
-  -  On ne peut pas positionner une note inférieure à 0 et supérieure à 20 pour une instance de Examen
-  -  On ne peut pas construire un Qcm avec un nombre négatif ou nul de questions
-  -  Le nombre de réponses correctes à un Qcm est compris entre zéro et le nombre de questions
-  -  Les notes orale et écrite d’un Projet sont comprises entre 0 et 10.
-  -  Dans la classe Diplome, ajoutez une méthode delivrer qui doit jeter une exception si la note moyenne de tous les examens est inférieure à 10.
-  -  Proposez une hiérarchie applicative de vos exceptions.
+  - Si nous analysons notre hiérarchie d’héritage, nous voyons que toutes les classes qui héritent de Examen héritent également de la méthode Examen.setNote. 
+
+  -  Or les classes Qcm et Projet ont une façon particulière de positionner une note. Donc ces classes ne devraient pas posséder cette méthode.
+  
+  
+  ## Astuce
+  * Transformez la classe Examen en classe abstraite.
+  * Créez un classe concrète Controle pour remplacer la classe Examen comme classe concrète.
