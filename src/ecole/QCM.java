@@ -4,7 +4,7 @@ public class QCM extends Control {
 	
 
 
-    public QCM(int numOfQuestions) throws IllegalArgumentException, NullPointerException
+   public QCM(int numOfQuestions) throws IllegalArgumentException, NullPointerException
 	{
 	 try
 	 {
