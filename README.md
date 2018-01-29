@@ -1,16 +1,18 @@
-# [b3_java_diplome_abstraite](https://spoonless.github.io/epsi-b3-java/classe_abstraite.html#exercice)
+# [b3_java_diplome_enumeration](https://spoonless.github.io/epsi-b3-java/enumeration.html#exercice)
 ## Diplôme et examens (suite)
+
+### Mention d’un diplôme
 
 * Reprenez l’implémentation du système de gestion des diplômes des chapitres précédents.
 
-* L’objectif est d’ajouter des contrôles sous la forme d’exceptions pour vérifier les cas suivants :
+### Un diplôme peut avoir une mention en fonction de la note :
 
-
-  - Si nous analysons notre hiérarchie d’héritage, nous voyons que toutes les classes qui héritent de Examen héritent également de la méthode Examen.setNote. 
-
-  -  Or les classes Qcm et Projet ont une façon particulière de positionner une note. Donc ces classes ne devraient pas posséder cette méthode.
+* entre 10 et 12, mention passable
+* entre 12 et 14, mention bien
+* entre 14 et 16, mention très bien
+* au delà de 16, mention excellent
   
   
-  ## Astuce
-  * Transformez la classe Examen en classe abstraite.
-  * Créez un classe concrète Controle pour remplacer la classe Examen comme classe concrète.
+### Ajoutez à la classe Diplome la méthode getMention() qui doit retourner un type d’énumération Java correspondant à la mention obtenue pour ce diplôme.
+
+### Modifiez votre programme de façon à afficher la mention lorsque le diplôme a été validé.
