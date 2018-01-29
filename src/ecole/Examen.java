@@ -18,22 +18,27 @@ public abstract class Examen {
 	     }
 
 		this.note = examenNote;
-		setApprieciationNote(examenNote);
+		//setApprieciationNote(examenNote);
 	}
 	
+	public String getApprieciationNote()
+	   {
+	       return apprieciation;
+	   }
 	
-	public String setApprieciationNote( double note2 ) 
+
+	public String setApprieciationNote( double note ) 
 	 {
 	
-		 if ( note2 < 8 ) 
+		 if ( note < 8 ) 
 		 {
 		       this.apprieciation = " Exam apprieciation : insufficient";
 		 } 
-		 else if ( note2 >= 8  && note2 <= 12 )
+		 else if ( note >= 8  && note <= 12 )
 		 {
 		       this.apprieciation =  " Exam apprieciation : passable ";  
 		 } 
-		 else if ( note2 >= 12 && note2 <= 15 )
+		 else if ( note >= 12 && note <= 15 )
 		 {
 		      this.apprieciation = " Exam apprieciation : good ";  
 	     } 
@@ -43,11 +48,9 @@ public abstract class Examen {
 		 }
 		      return this.apprieciation;
 		 }
-   
-    public String getApprieciationNote()
-    {
-        return apprieciation;
-    }
+  
+
+
 
 
 

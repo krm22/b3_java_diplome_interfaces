@@ -3,7 +3,6 @@ package ecole;
 public class QCM extends Control {
 	
 
-
    public QCM(int numOfQuestions) throws IllegalArgumentException, NullPointerException
 	{
 	 try
@@ -21,11 +20,11 @@ public class QCM extends Control {
        
 	 }
 	
-	public void setResponsesCorrecte(int nbReponsesCorrectes) throws IllegalArgumentException ,NullPointerException
+	public void setResponsesCorrecte( int nbReponsesCorrectes ) throws IllegalArgumentException ,NullPointerException
 	{
 	 try
 	 {
-	    if(nbReponsesCorrectes < 0 || nbReponsesCorrectes > 20)
+	    if( nbReponsesCorrectes < 0 || nbReponsesCorrectes > 20 )
 	    {
 	    	  throw new IllegalArgumentException("Numbers must be over 0 or 20 and under");
 	    }
@@ -42,6 +41,7 @@ public class QCM extends Control {
 
 	
 
+	@Override
 	public String setApprieciationNote(double note) 
 	{
 	     if (note < 8) 

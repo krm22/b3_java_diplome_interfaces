@@ -10,14 +10,24 @@ public class Control extends Examen {
 	public void setNote()
 	{
 		 this.note = (double)this.nbReponsesCorrectes / (double)this.numOfQuestions * bareme;
-		 setApprieciationNote(this.note);
+		 setApprieciationNote( this.note);
 	}
 	
-	public void setNote( double noteEcrite, int noteOrale) {
-		 setApprieciationNote(   noteEcrite );
-		 setApprieciationNote( noteOrale );
-		 this.note = (noteEcrite + noteOrale);
+	public void setNote( double noteEcrite ) {
+		 setApprieciationNote( noteEcrite );
+		 this.note = (noteEcrite);
 	}
+	
+	
+	@Override
+	public void setNote( int noteOrale ){
+		 setApprieciationNote( noteOrale );
+		 this.note = ( noteOrale );
+	}
+	
+	
+
+
 
 	
 	

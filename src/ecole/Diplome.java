@@ -87,7 +87,9 @@ public class Diplome {
 			
 			
 			e.setNote(11);
-		    p.setNote(10, 10);
+		    p.setNote(5);
+		    p.setNote(5.0);
+		   
 	
 			d.addExamen(e);
 			d.addExamen(p);

@@ -2,7 +2,8 @@ package ecole;
 
 public class Project extends Control {
 	
-   
+	int noteOrale;
+	
 	@Override
 	public String setApprieciationNote( double noteEcrite) throws IllegalArgumentException
 	{
