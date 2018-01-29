@@ -52,7 +52,7 @@ public class Diplome {
 	public static void main(String[] args) 
 	{
 			Diplome d = new Diplome();
-			Examen  e = new Examen();
+			Control  e = new Control();
 			Project p = new Project();
 			QCM qcm = new QCM(20); 
 			

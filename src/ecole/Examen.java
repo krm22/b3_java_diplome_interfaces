@@ -1,6 +1,6 @@
 package ecole;
 
-public class Examen {
+public abstract class Examen {
 	
 	protected double note;
 	protected String apprieciation;
@@ -22,18 +22,18 @@ public class Examen {
 	}
 	
 	
-	public String setApprieciationNote( int examenNote ) 
+	public String setApprieciationNote( double note ) 
 	 {
 	
-		 if ( examenNote < 8 ) 
+		 if ( note < 8 ) 
 		 {
 		       this.apprieciation = " Exam apprieciation : insufficient";
 		 } 
-		 else if ( examenNote >= 8  && examenNote <= 12 )
+		 else if ( note >= 8  && note <= 12 )
 		 {
 		       this.apprieciation =  " Exam apprieciation : passable ";  
 		 } 
-		 else if ( examenNote >= 12 && examenNote <= 15 )
+		 else if ( note >= 12 && note <= 15 )
 		 {
 		      this.apprieciation = " Exam apprieciation : good ";  
 	     } 
@@ -48,6 +48,8 @@ public class Examen {
     {
         return apprieciation;
     }
+
+
 
 
 

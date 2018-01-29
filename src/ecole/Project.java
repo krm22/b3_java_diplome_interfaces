@@ -1,13 +1,9 @@
 package ecole;
 
-public class Project extends Examen {
-	 public void setNote( double noteEcrite, int noteOrale) {
-		 setApprieciationNote( noteEcrite );
-		 setApprieciationNote( noteOrale );
-		 this.note = (noteEcrite + noteOrale);
-	 }
-	 
+public class Project extends Control {
 	
+	
+	@Override
 	public String setApprieciationNote( double noteEcrite) throws IllegalArgumentException
 	{
       try{
@@ -17,7 +13,7 @@ public class Project extends Examen {
     	     }
 	    if ( noteEcrite < 5 ) 
 	        {
-		       this.apprieciation =   "Project Ecrite apprieciation : insufficient";
+		       this.apprieciation = " Project Ecrite apprieciation : insufficient";
 		   } 
 	       else if ( noteEcrite >= 5  && noteEcrite <= 7){
 		       this.apprieciation =  "Project Ecrite apprieciation : passable ";  
@@ -40,7 +36,6 @@ public class Project extends Examen {
   
 
 	
-	@Override
 	public String setApprieciationNote( int noteOrale) throws IllegalArgumentException, NullPointerException
 	 {
 	  try{

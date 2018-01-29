@@ -1,10 +1,8 @@
 package ecole;
 
-public class QCM extends Examen {
+public class QCM extends Control {
 	
-	private int numOfQuestions;
-	private int nbReponsesCorrectes;
-	private static final int bareme = 20;
+
 
     public QCM(int numOfQuestions) throws IllegalArgumentException, NullPointerException
 	{
@@ -32,7 +30,7 @@ public class QCM extends Examen {
 	    	  throw new IllegalArgumentException("Numbers must be over 0 or 20 and under");
 	    }
 	      this.nbReponsesCorrectes = nbReponsesCorrectes;
-		  this.computeNote();
+		  this.setNote();
 	 } 
 	 catch(NullPointerException e)
      {
@@ -41,13 +39,10 @@ public class QCM extends Examen {
 		 
     }
 	
-	private void computeNote()
-	{
-		 this.note = (double)this.nbReponsesCorrectes / (double)this.numOfQuestions * bareme;
-		 setApprieciationNote(this.note);
-	}
+
 	
-	public void setApprieciationNote(double note) 
+	@Override
+	public String setApprieciationNote(double note) 
 	{
 	     if (note < 8) 
 	     {
@@ -65,6 +60,7 @@ public class QCM extends Examen {
 	     {
 	        this.apprieciation =  " QCM apprieciation : very good ";  
 	     }
+		return apprieciation;
 	}
 
 }
