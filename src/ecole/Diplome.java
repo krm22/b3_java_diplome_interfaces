@@ -18,7 +18,6 @@ public class Diplome {
 			sumOfNotes += exam.getNote();
 		}
 		average = sumOfNotes / this.examens.size();
-		System.out.println(average);
 		return average;
 	}
 	
@@ -59,14 +58,15 @@ public class Diplome {
 			qcm.setResponsesCorrecte(3);
 			
 			e.setNote(3);
-		    p.setNote(3, 3);
+		    p.setNote(3.5, 3);
 			e.getNote();
+			
 			
 			d.addExamen(e);
 			d.addExamen(p);
 			d.addExamen(qcm);
 			
-			//System.out.println(d.isValide());
+			System.out.println(d.isValide());
 			
 			d.displayDetailDesNotes();
 			try {

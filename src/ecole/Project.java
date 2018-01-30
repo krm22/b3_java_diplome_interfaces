@@ -2,6 +2,12 @@ package ecole;
 
 public class Project extends Control {
 	
+	public void setNote( double noteEcrite, int noteOrale) {
+		 setApprieciationNote( noteEcrite );
+		 setApprieciationNote( noteOrale );
+	}
+
+	
 	
 	@Override
 	public String setApprieciationNote( double noteEcrite) throws IllegalArgumentException
