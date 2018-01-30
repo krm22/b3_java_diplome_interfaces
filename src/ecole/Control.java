@@ -2,8 +2,8 @@ package ecole;
 
 public class Control extends Examen {
 	
+	private String appreciation;
 
-	@Override
 	public void setNote(int examenNote) throws IllegalArgumentException
 	{
 	     if (examenNote < 0 || examenNote > 20 )
@@ -12,8 +12,20 @@ public class Control extends Examen {
 	     }
 
 		this.note = examenNote;
-		setApprieciationNote(examenNote);
 	}
-     
+	
+	public void setAppreciation(String appreciation){
+		this.appreciation = appreciation;
+	}
+
+	@Override
+	public String getDetailDesNotes() {
+		StringBuilder detail = new StringBuilder();
+		detail.append("Contrôle: ").append(System.lineSeparator());
+		detail.append("Note: ").append(this.note).append(System.lineSeparator());
+		detail.append("Appréciation: ").append(this.appreciation);
+		return detail.toString();
+	}
+
 
 }

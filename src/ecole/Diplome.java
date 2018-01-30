@@ -30,8 +30,8 @@ public class Diplome {
 	{
 		for(Examen exam : examens)
 		{
-		System.out.println(exam.getApprieciationNote());	
-		System.out.println(exam.getNote());
+			System.out.println(exam.getDetailDesNotes() + System.lineSeparator());
+
 		}
 	}
 	
@@ -55,13 +55,15 @@ public class Diplome {
 			Project p = new Project();
 			QCM qcm = new QCM(20); 
 			
-			qcm.setResponsesCorrecte(3);
 			
+			qcm.setResponsesCorrecte(5);
+		
 			e.setNote(3);
-		    p.setNote(3.5, 3);
-			e.getNote();
-			
-			
+			e.setAppreciation("je t apprecie");
+		    p.setNote(3, 3.5);
+		    p.setApprieciationOrale("appreciation orale");
+		    p.setApprieciationEcrite("apreciation ecrite");
+
 			d.addExamen(e);
 			d.addExamen(p);
 			d.addExamen(qcm);

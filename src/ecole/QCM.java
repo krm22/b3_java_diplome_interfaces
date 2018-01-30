@@ -1,23 +1,22 @@
 package ecole;
 
-public class QCM extends Control {
+public class QCM extends Examen {
 	protected int numOfQuestions;
 	protected int nbReponsesCorrectes;
-	private static final int bareme = 20;
 	
 
-	@Override
-	public void setNote(int note)
-	{
-		 this.note = (double)this.nbReponsesCorrectes / (double)this.numOfQuestions * bareme;
-		 setApprieciationNote(this.note);
-	}
+	
+//	public void setNote(int note)
+//	{
+//		 this.note = (double)this.nbReponsesCorrectes / (double)this.numOfQuestions * bareme;
+//		 setApprieciationNote(this.note);
+//    }
 
    public QCM(int numOfQuestions) throws IllegalArgumentException, NullPointerException
 	{
 	 try
 	 {
-         if(numOfQuestions == 0)
+         if(numOfQuestions < 0)
          {
         	    throw new NullPointerException("Numbers must be over 0");
          }
@@ -39,7 +38,7 @@ public class QCM extends Control {
 	    	  throw new IllegalArgumentException("Numbers must be over 0 or 20 and under");
 	    }
 	      this.nbReponsesCorrectes = nbReponsesCorrectes;
-		  this.setNote( nbReponsesCorrectes);
+	      this.note = (double)this.nbReponsesCorrectes / (double)this.numOfQuestions * this.numOfQuestions;
 	 } 
 	 catch(NullPointerException e)
      {
@@ -47,10 +46,39 @@ public class QCM extends Control {
      }
 		 
     }
-	
+
+	@Override
+	public String getDetailDesNotes() {
+		StringBuilder detail = new StringBuilder();
+		detail.append("QCM: ").append(System.lineSeparator());
+		detail.append("Note: ").append(this.note).append(System.lineSeparator());
+		detail.append("Appréciation: ").append(this.getAppreciation());
+		return detail.toString();
+	}
+
+	private String getAppreciation() {
+		String apprieciation = "";
+		 if (this.note < 8) 
+	     {
+	        apprieciation = " QCM apprieciation : insufficient";
+	     }
+	     else if ( this.note >= 8 && this.note <= 12 )
+	     {
+	        apprieciation =  " QCM apprieciation : passable ";  
+	     } 
+	     else if ( this.note >= 12 && this.note <= 15 )
+	     {
+	        apprieciation =  " QCM apprieciation : good ";   
+	     } 
+	     else 
+	     {
+	        apprieciation =  " QCM apprieciation : very good ";  
+	     }
+		return apprieciation;
+	}
 
 	
-	@Override
+	/*@Override
 	public String setApprieciationNote(double note) 
 	{
 	     if (note < 8) 
@@ -70,6 +98,10 @@ public class QCM extends Control {
 	        this.apprieciation =  " QCM apprieciation : very good ";  
 	     }
 		return apprieciation;
-	}
+	}*/
+
+
+
+
 
 }
