@@ -54,19 +54,19 @@ public class Diplome {
 	
 			if( moyen >= 10 && moyen <= 12 )
 	        {
-				System.out.println(Mention.PASSABLE.getMention());
+				System.out.print(Mention.PASSABLE.getMention() + System.lineSeparator());
 			}
 	        else if( moyen >= 12 && moyen <= 14 )
 	        {
-	        	    System.out.println(Mention.BIEN.getMention());
+	        	    System.out.println(Mention.BIEN.getMention() +  System.lineSeparator());
 	        }
 	        else if( moyen >= 14 && moyen <= 16 )
 	        {
-	        	System.out.println(Mention.TRESBIEN.getMention());
+	        	System.out.println(Mention.TRESBIEN.getMention() + System.lineSeparator());
 	        }
 	        else
 	        {
-	        	System.out.println(Mention.EXCELLANT.getMention()); 
+	        	System.out.println(Mention.EXCELLANT.getMention() + System.lineSeparator()); 
 	        }
 		
 	}

@@ -22,11 +22,11 @@ public class QCM extends Examen {
        
 	 }
 	
-	public void setResponsesCorrecte(int nbReponsesCorrectes) throws IllegalArgumentException ,NullPointerException
+	public void setResponsesCorrecte( int nbReponsesCorrectes ) throws IllegalArgumentException ,NullPointerException
 	{
 	 try
 	 {
-	    if(nbReponsesCorrectes < 0 || nbReponsesCorrectes > 20)
+	    if( nbReponsesCorrectes < 0 || nbReponsesCorrectes > 20 )
 	    {
 	    	  throw new IllegalArgumentException("Numbers must be over 0 and either equal to or under 20");
 	    }
@@ -40,6 +40,11 @@ public class QCM extends Examen {
 		 
     }
 
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> 741085fd50a9f33e0dbb1136ce4f788fcfcb2d10
 	@Override
 	public String getDetailDesNotes() {
 		StringBuilder detail = new StringBuilder();

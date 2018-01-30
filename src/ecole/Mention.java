@@ -1,6 +1,9 @@
 package ecole;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 741085fd50a9f33e0dbb1136ce4f788fcfcb2d10
 public enum Mention {
          
 	PASSABLE(" Student has a mention of : mention passable"), 
@@ -24,4 +27,8 @@ public enum Mention {
 	
 	
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 741085fd50a9f33e0dbb1136ce4f788fcfcb2d10
