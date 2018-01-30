@@ -5,13 +5,6 @@ public class QCM extends Examen {
 	protected int nbReponsesCorrectes;
 	
 
-	
-//	public void setNote(int note)
-//	{
-//		 this.note = (double)this.nbReponsesCorrectes / (double)this.numOfQuestions * bareme;
-//		 setApprieciationNote(this.note);
-//    }
-
    public QCM(int numOfQuestions) throws IllegalArgumentException, NullPointerException
 	{
 	 try
@@ -35,7 +28,7 @@ public class QCM extends Examen {
 	 {
 	    if(nbReponsesCorrectes < 0 || nbReponsesCorrectes > 20)
 	    {
-	    	  throw new IllegalArgumentException("Numbers must be over 0 or 20 and under");
+	    	  throw new IllegalArgumentException("Numbers must be over 0 and either equal to or under 20");
 	    }
 	      this.nbReponsesCorrectes = nbReponsesCorrectes;
 	      this.note = (double)this.nbReponsesCorrectes / (double)this.numOfQuestions * this.numOfQuestions;
@@ -55,6 +48,8 @@ public class QCM extends Examen {
 		detail.append("Appréciation: ").append(this.getAppreciation());
 		return detail.toString();
 	}
+	
+	
 
 	private String getAppreciation() {
 		String apprieciation = "";
@@ -77,29 +72,7 @@ public class QCM extends Examen {
 		return apprieciation;
 	}
 
-	
-	/*@Override
-	public String setApprieciationNote(double note) 
-	{
-	     if (note < 8) 
-	     {
-	        this.apprieciation = " QCM apprieciation : insufficient";
-	     }
-	     else if ( note >= 8 && note <= 12 )
-	     {
-	        this.apprieciation =  " QCM apprieciation : passable ";  
-	     } 
-	     else if ( note >= 12 && note <= 15 )
-	     {
-	        this.apprieciation =  " QCM apprieciation : good ";   
-	     } 
-	     else 
-	     {
-	        this.apprieciation =  " QCM apprieciation : very good ";  
-	     }
-		return apprieciation;
-	}*/
-
+}
 
 
 

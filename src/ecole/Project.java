@@ -1,6 +1,7 @@
 package ecole;
 
 public class Project extends Examen {
+	
 	private String apprieciationOrale;
 	private String apprieciationEcrite;
 	private double noteEcrite;
@@ -40,10 +41,6 @@ public class Project extends Examen {
 		detail.append("Appréciation orale: ").append(this.getApprieciationOrale());
 		return detail.toString();
     }
-	
-  
-
-	
 
 };
 

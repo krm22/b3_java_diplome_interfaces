@@ -22,7 +22,8 @@ public class Diplome {
 	}
 	
 	public boolean isValide() 
-	{
+	{   
+	    getMention((this.calcMoyen()));
 		return (this.calcMoyen() >= 10) ? true : false; 	
 	}
 	
@@ -47,6 +48,28 @@ public class Diplome {
          e.printStackTrace();
       }
     }
+	
+	public void getMention( int moyen )
+	{
+	
+			if( moyen >= 10 && moyen <= 12 )
+	        {
+				System.out.println(Mention.PASSABLE.getMention());
+			}
+	        else if( moyen >= 12 && moyen <= 14 )
+	        {
+	        	    System.out.println(Mention.BIEN.getMention());
+	        }
+	        else if( moyen >= 14 && moyen <= 16 )
+	        {
+	        	System.out.println(Mention.TRESBIEN.getMention());
+	        }
+	        else
+	        {
+	        	System.out.println(Mention.EXCELLANT.getMention()); 
+	        }
+		
+	}
 	
 	public static void main(String[] args) 
 	{
