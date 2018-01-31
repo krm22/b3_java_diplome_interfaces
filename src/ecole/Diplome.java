@@ -31,8 +31,9 @@ public class Diplome {
 	{
 		for(Examen exam : examens)
 		{
-			System.out.println(exam.getDetailDesNotes() + System.lineSeparator());
-
+			System.out.println(exam.toString());
+			System.out.println(exam.getDetailDesNotes());
+			System.out.println();
 		}
 	}
 	
@@ -69,40 +70,5 @@ public class Diplome {
 	        	System.out.println(Mention.EXCELLANT.getMention() + System.lineSeparator()); 
 	        }
 		
-	}
-	
-	public static void main(String[] args) 
-	{
-			Diplome d = new Diplome();
-			Control  e = new Control();
-			Project p = new Project();
-			QCM qcm = new QCM(20); 
-			
-			
-			qcm.setResponsesCorrecte(5);
-		
-			e.setNote(3);
-			e.setAppreciation("je t apprecie");
-		    p.setNote(3, 3.5);
-		    p.setApprieciationOrale("appreciation orale");
-		    p.setApprieciationEcrite("apreciation ecrite");
-
-			d.addExamen(e);
-			d.addExamen(p);
-			d.addExamen(qcm);
-			
-			System.out.println(d.isValide());
-			
-			d.displayDetailDesNotes();
-			try {
-				d.delivrer();
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-    }
-	
-	
-	
-	
+	}	
 }

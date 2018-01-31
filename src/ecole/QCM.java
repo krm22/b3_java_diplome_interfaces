@@ -4,6 +4,7 @@ public class QCM extends Examen {
 	protected int numOfQuestions;
 	protected int nbReponsesCorrectes;
 	
+	
 
    public QCM(int numOfQuestions) throws IllegalArgumentException, NullPointerException
 	{
@@ -48,7 +49,9 @@ public class QCM extends Examen {
 		detail.append("Appréciation: ").append(this.getAppreciation());
 		return detail.toString();
 	}
+	
 
+	
 	private String getAppreciation() {
 		String apprieciation = "";
 		 if (this.note < 8) 

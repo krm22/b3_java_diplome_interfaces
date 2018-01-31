@@ -40,9 +40,6 @@ public class Project extends Examen {
 		detail.append("Appréciation orale: ").append(this.getApprieciationOrale());
 		return detail.toString();
     }
-	
-  
 
-	
 
 };
