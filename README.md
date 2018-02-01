@@ -1,18 +1,24 @@
-# [b3_java_diplome_enumeration](https://spoonless.github.io/epsi-b3-java/enumeration.html#exercice)
+# [b3_java_diplome_interfaces](https://spoonless.github.io/epsi-b3-java/interface.html#id2)
 ## Diplôme et examens (suite)
 
-### Mention d’un diplôme
+# Reprenez l’implémentation du système de gestion des diplômes des chapitres précédents.
 
-* Reprenez l’implémentation du système de gestion des diplômes des chapitres précédents.
+## Faites évoluer la classe Examen afin d’ajouter un code pour un examen. 
+## Par exemple, un contrôle peut avoir le code « JAVA-LANG001 » et un projet « PHP-PRJ ».
 
-### Un diplôme peut avoir une mention en fonction de la note :
+* Ajoutez la méthode getExamens dans la classe Diplome. 
+* Cette méthode doit retourner un tableau des examens du diplôme trié selon un critère fourni en paramètre.
 
-* entre 10 et 12, mention passable
-* entre 12 et 14, mention bien
-* entre 14 et 16, mention très bien
-* au delà de 16, mention excellent
-  
-  
-### Ajoutez à la classe Diplome la méthode getMention() qui doit retourner un type d’énumération Java correspondant à la mention obtenue pour ce diplôme.
+ *Modifiez votre programme pour afficher successivement la liste des examens d’un diplôme triée suivant :
 
-### Modifiez votre programme de façon à afficher la mention lorsque le diplôme a été validé.
+- le code des examens
+- la note des examens
+- la date des examens
+
+### Astuce
+
+- Pour trier un tableau en Java, vous devez utiliser la méthode Arrays.sort(Object[], Comparator). 
+
+- Cette méthode prend en premier paramètre le tableau à trier et en deuxième paramètre une implémentation de l’interface  générique Comparator.
+
+- C’est l’implémentation de cette interface qui va être en charge de comparer les éléments deux à deux lors du tri.
