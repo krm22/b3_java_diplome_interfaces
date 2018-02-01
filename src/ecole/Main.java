@@ -6,8 +6,6 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		LocalDate date = LocalDate.now();
-		
 		Diplome d = new Diplome();
 		
 		Control  e = new Control();
@@ -28,7 +26,11 @@ public class Main {
 		d.addExamen(p);
 		d.addExamen(qcm);
 		
+		
+		
 		System.out.println(d.isValide());
+		
+		
 		
 		System.out.println("Exams under 4.00/20");
 		System.out.println(" --------------------------- ");
@@ -40,9 +42,41 @@ public class Main {
 		System.out.println("Exams after 23/11/2018");
 		System.out.println(" --------------------------- ");
 		d.deleteExams(LocalDate.of(2018, 11, 23));
-		for (Examen examen : d.getExamens()) {
+		/*for (Examen examen : d.getExamens()) {
 			System.out.println(examen.toString());
-		}
+		}*/
+		System.out.println(" --------------------------- ");
+		
+		
+		System.out.println(" --------------------------- ");
+		p.setProjectCode("PHP-PRJ");
+		e.setCode("Java-Lang001");
+		System.out.println("The exam code is : " + e.getCode());
+		System.out.println("The project code is : " + p.getCode());
+		System.out.println(" --------------------------- ");
+
+		d = new Diplome();
+		d.addExamen(p);
+		d.addExamen(e);
+		System.out.println("Sorted by code");
+		System.out.println(" --------------------------- ");
+		d.getExamens((Examen exam) -> exam.getCode()).stream()
+			.map(exam -> exam.getCode())
+			.forEach(System.out::println);
+		System.out.println(" --------------------------- ");
+		
+		System.out.println("Sorted by note");
+		System.out.println(" --------------------------- ");
+		d.getExamens((Examen exam) -> exam.getNote()).stream()
+			.map(exam -> exam.getNote())
+			.forEach(System.out::println);
+		System.out.println(" --------------------------- ");
+		
+		System.out.println("Sorted by date");
+		System.out.println(" --------------------------- ");
+		d.getExamens((Examen exam) -> exam.getDate()).stream()
+			.map(exam -> exam.getDate())
+			.forEach(System.out::println);
 		System.out.println(" --------------------------- ");
 		
 		d.displayDetailDesNotes();

@@ -10,6 +10,8 @@ public abstract class Examen {
 
 	protected double note;
 	protected LocalDate date = LocalDate.now();
+	protected String code = "";
+	
 	
 	@Override
 	public String toString(){ 		
@@ -36,6 +38,14 @@ public abstract class Examen {
 	public LocalDate getDate()
 	{
 		return date;
+	}
+	
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 	abstract public String getDetailDesNotes();

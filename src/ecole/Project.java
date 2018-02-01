@@ -29,6 +29,11 @@ public class Project extends Examen {
 	    this.note = noteOrale + noteEcrite;
 	}
 	
+	public void setProjectCode(String code) 
+	{
+		this.code = code;
+	}
+	
 	@Override
 	public String getDetailDesNotes(){
 		StringBuilder detail = new StringBuilder();
