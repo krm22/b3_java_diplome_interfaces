@@ -1,5 +1,8 @@
 package ecole;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class Diplome {
 	
@@ -9,7 +12,26 @@ public class Diplome {
 	{
 		examens.add(exam);
 	}
-
+	
+	public List<Examen> examensDontNoteInferieureA(int targetNote)
+	{
+		// return examens.stream().filter(e -> e.getNote() < targetNote).collect(Collectors.toList());
+		List<Examen> result  = new ArrayList<>(); 
+		for(Examen exam : examens){
+			  if(exam.getNote() < targetNote)
+	          {
+				 result.add(exam);
+			  }
+		}
+		
+		return result;
+	}
+	
+	public void deleteExams(LocalDate targetDate)
+	{
+		examens.removeIf((Examen exam) -> exam.getDate().isBefore(targetDate));
+	}
+	
 	private int calcMoyen()
 	{
 		int sumOfNotes = 0;
@@ -39,11 +61,13 @@ public class Diplome {
 	
 	public void delivrer() throws Exception
 	{
-      try{
-	     if(this.calcMoyen() <10){
+      try
+      {
+	     if(this.calcMoyen() <10)
+	     {
 		   throw new Exception(" The class average has fallen below 50 % ");
-	       }
-        }
+	     }
+      }
       catch( Exception e)
       {
          e.printStackTrace();
@@ -70,5 +94,11 @@ public class Diplome {
 	        	System.out.println(Mention.EXCELLANT.getMention() + System.lineSeparator()); 
 	        }
 		
-	}	
+	}
+
+	public ArrayList<Examen> getExamens() {
+		return examens;
+	}
+	
+	
 }

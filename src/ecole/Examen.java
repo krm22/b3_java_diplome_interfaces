@@ -32,6 +32,11 @@ public abstract class Examen {
 	{
 		return note;
 	}
+	
+	public LocalDate getDate()
+	{
+		return date;
+	}
 
 	abstract public String getDetailDesNotes();
 
